@@ -1,7 +1,6 @@
 import { Feature2AppRouter } from '@nx-trpc-nextjs-playground/features/backend/feature2';
 import { httpBatchLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
-import superjson from 'superjson';
 
 function getBaseUrl() {
   if (typeof window !== 'undefined')
@@ -19,7 +18,6 @@ function getBaseUrl() {
 export const api = createTRPCNext<Feature2AppRouter>({
   config(opts) {
     return {
-      transformer: superjson,
       links: [
         httpBatchLink({
           /**

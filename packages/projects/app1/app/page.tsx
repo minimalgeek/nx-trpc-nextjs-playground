@@ -11,8 +11,6 @@ import {
 import styles from './page.module.css';
 
 function Index() {
-  // const data = await api.greeting.getGreeting.query();
-  // const data2 = await api.something.getSomething.query();
   return (
     <div className={styles['page']}>
       {/* <h1>{data.message}</h1>

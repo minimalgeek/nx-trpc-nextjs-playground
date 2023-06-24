@@ -1,7 +1,6 @@
 import { Feature1AppRouter } from '@nx-trpc-nextjs-playground/features/backend/feature1';
 import { httpBatchLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
-import superjson from 'superjson';
 
 function getBaseUrl() {
   if (typeof window !== 'undefined')
@@ -18,11 +17,13 @@ function getBaseUrl() {
 
 const fn = createTRPCNext<Feature1AppRouter>;
 type Fn = typeof fn;
+type FnArgument = Parameters<Fn>;
+type FnReturn = ReturnType<Fn>;
 
 export const api = createTRPCNext<Feature1AppRouter>({
   config(opts) {
     return {
-      transformer: superjson,
+      // transformer: superjson,
       links: [
         httpBatchLink({
           /**
