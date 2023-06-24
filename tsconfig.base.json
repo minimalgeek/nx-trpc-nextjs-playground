@@ -24,14 +24,8 @@
       "@nx-trpc-nextjs-playground/features/frontend/feature1": [
         "packages/features/frontend/feature1/src/index.ts"
       ],
-      "@nx-trpc-nextjs-playground/features/frontend/feature1/server": [
-        "packages/features/frontend/feature1/src/server.ts"
-      ],
       "@nx-trpc-nextjs-playground/features/frontend/feature2": [
         "packages/features/frontend/feature2/src/index.ts"
-      ],
-      "@nx-trpc-nextjs-playground/features/frontend/feature2/server": [
-        "packages/features/frontend/feature2/src/server.ts"
       ]
     }
   },

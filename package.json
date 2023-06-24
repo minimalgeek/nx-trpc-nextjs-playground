@@ -44,11 +44,16 @@
   },
   "dependencies": {
     "@swc/helpers": "~0.5.0",
+    "@tanstack/react-query": "^4.29.15",
     "@trpc/client": "^10.32.0",
+    "@trpc/next": "^10.32.0",
+    "@trpc/react-query": "^10.32.0",
     "@trpc/server": "^10.32.0",
     "next": "13.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tslib": "^2.3.0"
+    "superjson": "^1.12.3",
+    "tslib": "^2.3.0",
+    "zod": "^3.21.4"
   }
 }
