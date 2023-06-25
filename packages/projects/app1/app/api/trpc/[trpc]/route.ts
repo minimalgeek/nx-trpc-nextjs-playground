@@ -2,7 +2,7 @@ import {
   feature1AttachRouter,
   Feature1Repo,
 } from '@nx-trpc-nextjs-playground/features/backend/feature1';
-import { feature2AppRouter } from '@nx-trpc-nextjs-playground/features/backend/feature2';
+import { feature2AttachRouter } from '@nx-trpc-nextjs-playground/features/backend/feature2';
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch';
 import { trpc } from '../../../../server/trpc';
 
@@ -16,7 +16,7 @@ const handler = (req: Request) =>
     req,
     router: trpc.merge(
       feature1AttachRouter(trpc, repoImpl),
-      feature2AppRouter(trpc)
+      feature2AttachRouter(trpc)
     ),
     createContext: () => ({}),
   });
