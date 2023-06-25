@@ -1,5 +1,5 @@
 import { Feature1AppRouter } from '@nx-trpc-nextjs-playground/features/backend/feature1';
-import { httpBatchLink } from '@trpc/client';
+import { httpBatchLink, loggerLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 
 function getBaseUrl() {
@@ -15,16 +15,12 @@ function getBaseUrl() {
   return `http://localhost:${process.env.PORT ?? 4200}`;
 }
 
-const fn = createTRPCNext<Feature1AppRouter>;
-type Fn = typeof fn;
-type FnArgument = Parameters<Fn>;
-type FnReturn = ReturnType<Fn>;
-
 export const api = createTRPCNext<Feature1AppRouter>({
   config(opts) {
     return {
       // transformer: superjson,
       links: [
+        loggerLink(),
         httpBatchLink({
           /**
            * If you want to use SSR, you need to use the server's full URL

@@ -26,6 +26,9 @@
       ],
       "@nx-trpc-nextjs-playground/features/frontend/feature2": [
         "packages/features/frontend/feature2/src/index.ts"
+      ],
+      "@nx-trpc-nextjs-playground/utils/trpc-helper": [
+        "packages/utils/trpc-helper/src/index.ts"
       ]
     }
   },

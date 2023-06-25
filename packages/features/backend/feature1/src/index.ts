@@ -5,10 +5,9 @@ import { type inferRouterInputs, type inferRouterOutputs } from '@trpc/server';
  * @example
  */
 export {
-  appRouter as feature1AppRouter,
+  attachRouter as feature1AppRouter,
   type AppRouter as Feature1AppRouter,
 } from './lib/root';
-export { merge as feature1Merge } from './lib/trpc';
 
 /**
  * Inference helpers for input types

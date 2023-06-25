@@ -4,7 +4,7 @@ import { type inferRouterInputs, type inferRouterOutputs } from '@trpc/server';
  * The `appRouter` export is used to configure the Next.js tRPC API endpoint, and the `AppRouter` type is used by the Next.js app to create the type-safe tRPC client.
  * @example
  */
-export { appRouter as feature2AppRouter, type AppRouter as Feature2AppRouter } from './lib/root';
+export { attachRouter as feature2AppRouter, type AppRouter as Feature2AppRouter } from './lib/root';
 
 /**
  * Inference helpers for input types

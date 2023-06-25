@@ -1,10 +1,12 @@
-import { router } from './trpc';
+import { ReturnTypeCreateTrpc } from '@nx-trpc-nextjs-playground/utils/trpc-helper';
 import { greetingRouter } from './routes/greeting';
 
-const appRouter = router({
-  greeting: greetingRouter,
-});
+export const attachRouter = (props: ReturnTypeCreateTrpc) => {
+  const { router } = props;
+  const appRouter = router({
+    greeting: greetingRouter(props),
+  });
+  return appRouter;
+};
 
-type AppRouter = typeof appRouter;
-
-export { appRouter, AppRouter };
+export type AppRouter = ReturnType<typeof attachRouter>;

@@ -1,5 +1,5 @@
 import { Feature2AppRouter } from '@nx-trpc-nextjs-playground/features/backend/feature2';
-import { httpBatchLink } from '@trpc/client';
+import { httpBatchLink, loggerLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 
 function getBaseUrl() {
@@ -19,6 +19,7 @@ export const api = createTRPCNext<Feature2AppRouter>({
   config(opts) {
     return {
       links: [
+        loggerLink({}),
         httpBatchLink({
           /**
            * If you want to use SSR, you need to use the server's full URL
