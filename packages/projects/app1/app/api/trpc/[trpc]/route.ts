@@ -1,13 +1,23 @@
-import { feature1AppRouter } from '@nx-trpc-nextjs-playground/features/backend/feature1';
+import {
+  feature1AttachRouter,
+  Feature1Repo,
+} from '@nx-trpc-nextjs-playground/features/backend/feature1';
 import { feature2AppRouter } from '@nx-trpc-nextjs-playground/features/backend/feature2';
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch';
 import { trpc } from '../../../../server/trpc';
+
+const repoImpl: Feature1Repo = {
+  findById: (id) => ({ name: `csoki ${id}` }),
+};
 
 const handler = (req: Request) =>
   fetchRequestHandler({
     endpoint: '/api/trpc',
     req,
-    router: trpc.merge(feature1AppRouter(trpc), feature2AppRouter(trpc)),
+    router: trpc.merge(
+      feature1AttachRouter(trpc, repoImpl),
+      feature2AppRouter(trpc)
+    ),
     createContext: () => ({}),
   });
 

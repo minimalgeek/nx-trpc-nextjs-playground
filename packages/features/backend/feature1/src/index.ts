@@ -5,8 +5,9 @@ import { type inferRouterInputs, type inferRouterOutputs } from '@trpc/server';
  * @example
  */
 export {
-  attachRouter as feature1AppRouter,
+  attachRouter as feature1AttachRouter,
   type AppRouter as Feature1AppRouter,
+  type Repo as Feature1Repo,
 } from './lib/root';
 
 /**
