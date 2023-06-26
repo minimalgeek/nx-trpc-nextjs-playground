@@ -2,9 +2,9 @@
 
 import { api } from './api-util';
 
-function Feature1View() {
+function View() {
   const { data } = api.something.getSomething.useQuery();
   return <div>{data?.message}</div>;
 }
 
-export { Feature1View };
+export const Feature1View = api.withTRPC(View);
