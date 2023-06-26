@@ -1,21 +1,21 @@
 {
-  "name": "features-backend-feature2",
+  "name": "features-feature1-be",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/features/backend/feature2/src",
+  "sourceRoot": "packages/features/feature1/be/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/features/backend/feature2/**/*.ts"]
+        "lintFilePatterns": ["packages/features/feature1/be/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/features/backend/feature2/jest.config.ts",
+        "jestConfig": "packages/features/feature1/be/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {

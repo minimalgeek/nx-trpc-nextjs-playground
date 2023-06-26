@@ -3,11 +3,11 @@
 import {
   Feature1View,
   feature1Api,
-} from '@nx-trpc-nextjs-playground/features/frontend/feature1';
+} from '@nx-trpc-nextjs-playground/features/feature1/fe';
 import {
   Feature2View,
   feature2Api,
-} from '@nx-trpc-nextjs-playground/features/frontend/feature2';
+} from '@nx-trpc-nextjs-playground/features/feature2/fe';
 import styles from './page.module.css';
 
 function Index() {

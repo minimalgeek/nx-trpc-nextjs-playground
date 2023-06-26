@@ -1,8 +1,8 @@
 import {
   feature1AttachRouter,
   Feature1Repo,
-} from '@nx-trpc-nextjs-playground/features/backend/feature1';
-import { feature2AttachRouter } from '@nx-trpc-nextjs-playground/features/backend/feature2';
+} from '@nx-trpc-nextjs-playground/features/feature1/be';
+import { feature2AttachRouter } from '@nx-trpc-nextjs-playground/features/feature2/be';
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch';
 import { trpc } from '../../../../server/trpc';
 

@@ -1,7 +1,7 @@
 {
-  "name": "features-frontend-feature1",
+  "name": "features-feature2-fe",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/features/frontend/feature1/src",
+  "sourceRoot": "packages/features/feature2/fe/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -10,7 +10,7 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "packages/features/frontend/feature1/**/*.{ts,tsx,js,jsx}"
+          "packages/features/feature2/fe/**/*.{ts,tsx,js,jsx}"
         ]
       }
     }

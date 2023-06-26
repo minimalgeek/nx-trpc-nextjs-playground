@@ -1,4 +1,4 @@
-import { Feature2AppRouter } from '@nx-trpc-nextjs-playground/features/backend/feature2';
+import { Feature2AppRouter } from '@nx-trpc-nextjs-playground/features/feature2/be';
 import { httpBatchLink, loggerLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 

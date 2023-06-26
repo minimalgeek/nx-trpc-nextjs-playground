@@ -15,17 +15,17 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-trpc-nextjs-playground/features/backend/feature1": [
-        "packages/features/backend/feature1/src/index.ts"
+      "@nx-trpc-nextjs-playground/features/feature1/be": [
+        "packages/features/feature1/be/src/index.ts"
       ],
-      "@nx-trpc-nextjs-playground/features/backend/feature2": [
-        "packages/features/backend/feature2/src/index.ts"
+      "@nx-trpc-nextjs-playground/features/feature1/fe": [
+        "packages/features/feature1/fe/src/index.ts"
       ],
-      "@nx-trpc-nextjs-playground/features/frontend/feature1": [
-        "packages/features/frontend/feature1/src/index.ts"
+      "@nx-trpc-nextjs-playground/features/feature2/be": [
+        "packages/features/feature2/be/src/index.ts"
       ],
-      "@nx-trpc-nextjs-playground/features/frontend/feature2": [
-        "packages/features/frontend/feature2/src/index.ts"
+      "@nx-trpc-nextjs-playground/features/feature2/fe": [
+        "packages/features/feature2/fe/src/index.ts"
       ],
       "@nx-trpc-nextjs-playground/utils/trpc-helper": [
         "packages/utils/trpc-helper/src/index.ts"
